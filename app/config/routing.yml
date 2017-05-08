@@ -1,0 +1,33 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+pokemon_show: 
+    path: /show/{id}
+    defaults: {_controller: "AppBundle:Pokemon:show"}
+
+
+pokemon_new: 
+    path: /new
+    defaults: {_controller: "AppBundle:Pokemon:new"}
+
+pokemon_create: 
+    path: /create
+    defaults: {_controller: "AppBundle:Pokemon:create"}
+    requirements:  {_method: post}
+
+pokemon_edit:
+  path: /edit/{id}
+  defaults: {_controller: "AppBundle:Pokemon:edit"}
+
+
+pokemon_update:
+  path: /update/{id}
+  defaults: {_controller: "AppBundle:Pokemon:update"}
+  requirements:  {_method: post|put}
+
+pokemon_delete:
+  path: /delete/{id}
+  defaults: {_controller: "AppBundle:Pokemon:delete"}
+  requirements:  {_method: post|delete}
+

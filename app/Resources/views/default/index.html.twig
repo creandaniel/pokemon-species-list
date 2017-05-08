@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-success">
+                <div class="panel-heading">List of Pokemon Species </div>
+
+                  <h1>Show Pokemons</h1>
+          <ul>
+            {% for pokemon in pokemon %}
+              <li>
+                {{ pokemon.title }} -
+                <a href="{{ path('pokemon_show', {'id': pokemon.id}) }}"> View Pokemons </a>
+              </li>
+            {% endfor %}
+          </ul>
+
+
+            </div>
+
+            {% if app.user == null %}
+              <a href="/login" class="btn btn-info"> You need to login to see the list 😜😜 >></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

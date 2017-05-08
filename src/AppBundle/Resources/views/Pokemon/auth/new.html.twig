@@ -1,0 +1,18 @@
+
+
+{% extends '::base.html.twig'  %}
+
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+<h1> Create a new Pokemon</h1>
+
+{{form(form, {attr:{novalidate: 'novalidate'}}) }}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

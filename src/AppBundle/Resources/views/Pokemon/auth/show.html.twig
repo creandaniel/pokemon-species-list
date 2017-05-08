@@ -1,0 +1,19 @@
+{% extends '::base.html.twig'  %}
+
+{% block body -%}
+
+<h1> Create a new Pokemon</h1>
+
+Pokemon ID is: {{ pokemon.id }} - {{ pokemon.name }}
+
+<p>{{ pokemon.description }} </p>
+
+
+<ul> 
+<li><a href ="{{ path('pokemon_edit', {'id': pokemon.id}) }}"> Edit exsisting Pokemon </a></li>
+<li>{{ form(delete_form) }} </li>
+
+</ul>
+
+
+{% endblock %}
